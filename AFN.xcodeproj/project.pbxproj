@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		0F547C5E1D13857600D8D283 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F547C5D1D13857600D8D283 /* main.m */; };
 		0F547C611D13857600D8D283 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F547C601D13857600D8D283 /* AppDelegate.m */; };
-		0F547C641D13857600D8D283 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F547C631D13857600D8D283 /* ViewController.m */; };
 		0F547C671D13857600D8D283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F547C651D13857600D8D283 /* Main.storyboard */; };
 		0F547C691D13857600D8D283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F547C681D13857600D8D283 /* Assets.xcassets */; };
 		0F547C6C1D13857600D8D283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F547C6A1D13857600D8D283 /* LaunchScreen.storyboard */; };
 		0F547C771D13857600D8D283 /* AFNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F547C761D13857600D8D283 /* AFNTests.m */; };
 		0F547C821D13857600D8D283 /* AFNUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F547C811D13857600D8D283 /* AFNUITests.m */; };
+		0F547C911D1387C200D8D283 /* AFNHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F547C901D1387C200D8D283 /* AFNHelper.m */; };
+		0F547CD31D13907200D8D283 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F547CD21D13907200D8D283 /* TableViewController.m */; };
+		7418AFB517C51B70A7C8C9FA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1185AB2BA5C93C214BE6F973 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,6 @@
 		0F547C5D1D13857600D8D283 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0F547C5F1D13857600D8D283 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0F547C601D13857600D8D283 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0F547C621D13857600D8D283 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0F547C631D13857600D8D283 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0F547C661D13857600D8D283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F547C681D13857600D8D283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F547C6B1D13857600D8D283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,13 @@
 		0F547C7D1D13857600D8D283 /* AFNUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AFNUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F547C811D13857600D8D283 /* AFNUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFNUITests.m; sourceTree = "<group>"; };
 		0F547C831D13857600D8D283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F547C8F1D1387C200D8D283 /* AFNHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNHelper.h; sourceTree = "<group>"; };
+		0F547C901D1387C200D8D283 /* AFNHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNHelper.m; sourceTree = "<group>"; };
+		0F547CD11D13907200D8D283 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		0F547CD21D13907200D8D283 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		0FC21BC001A9714381AD32FD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		1185AB2BA5C93C214BE6F973 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		76B186A0BA11443C8E3B0F2D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7418AFB517C51B70A7C8C9FA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +93,8 @@
 				0F547C751D13857600D8D283 /* AFNTests */,
 				0F547C801D13857600D8D283 /* AFNUITests */,
 				0F547C5A1D13857600D8D283 /* Products */,
+				68E4810963E2B98E037A6817 /* Pods */,
+				AEC9315E0574EDC2170B3472 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,15 +111,17 @@
 		0F547C5B1D13857600D8D283 /* AFN */ = {
 			isa = PBXGroup;
 			children = (
+				0F547C8F1D1387C200D8D283 /* AFNHelper.h */,
+				0F547C901D1387C200D8D283 /* AFNHelper.m */,
 				0F547C5F1D13857600D8D283 /* AppDelegate.h */,
 				0F547C601D13857600D8D283 /* AppDelegate.m */,
-				0F547C621D13857600D8D283 /* ViewController.h */,
-				0F547C631D13857600D8D283 /* ViewController.m */,
 				0F547C651D13857600D8D283 /* Main.storyboard */,
 				0F547C681D13857600D8D283 /* Assets.xcassets */,
 				0F547C6A1D13857600D8D283 /* LaunchScreen.storyboard */,
 				0F547C6D1D13857600D8D283 /* Info.plist */,
 				0F547C5C1D13857600D8D283 /* Supporting Files */,
+				0F547CD11D13907200D8D283 /* TableViewController.h */,
+				0F547CD21D13907200D8D283 /* TableViewController.m */,
 			);
 			path = AFN;
 			sourceTree = "<group>";
@@ -140,6 +152,23 @@
 			path = AFNUITests;
 			sourceTree = "<group>";
 		};
+		68E4810963E2B98E037A6817 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76B186A0BA11443C8E3B0F2D /* Pods.debug.xcconfig */,
+				0FC21BC001A9714381AD32FD /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AEC9315E0574EDC2170B3472 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1185AB2BA5C93C214BE6F973 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F547C861D13857600D8D283 /* Build configuration list for PBXNativeTarget "AFN" */;
 			buildPhases = (
+				D8B52A42965C6469E42B1375 /* Check Pods Manifest.lock */,
 				0F547C551D13857600D8D283 /* Sources */,
 				0F547C561D13857600D8D283 /* Frameworks */,
 				0F547C571D13857600D8D283 /* Resources */,
+				F98CE2BC2904FCE042BBEAA7 /* Embed Pods Frameworks */,
+				BEB0924B6AF4EC1359B7C7FC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,14 +300,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BEB0924B6AF4EC1359B7C7FC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8B52A42965C6469E42B1375 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F98CE2BC2904FCE042BBEAA7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0F547C551D13857600D8D283 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F547C641D13857600D8D283 /* ViewController.m in Sources */,
 				0F547C611D13857600D8D283 /* AppDelegate.m in Sources */,
 				0F547C5E1D13857600D8D283 /* main.m in Sources */,
+				0F547CD31D13907200D8D283 /* TableViewController.m in Sources */,
+				0F547C911D1387C200D8D283 /* AFNHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +497,7 @@
 		};
 		0F547C871D13857600D8D283 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76B186A0BA11443C8E3B0F2D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AFN/Info.plist;
@@ -427,6 +509,7 @@
 		};
 		0F547C881D13857600D8D283 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FC21BC001A9714381AD32FD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AFN/Info.plist;
@@ -501,6 +584,7 @@
 				0F547C881D13857600D8D283 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F547C891D13857600D8D283 /* Build configuration list for PBXNativeTarget "AFNTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +593,7 @@
 				0F547C8B1D13857600D8D283 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F547C8C1D13857600D8D283 /* Build configuration list for PBXNativeTarget "AFNUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +602,7 @@
 				0F547C8E1D13857600D8D283 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

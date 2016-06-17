@@ -26,7 +26,7 @@
         handle = [AFNHelper manager];
         // 设置可接受的类型
         handle.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain",@"application/json",@"text/json",@"text/javascript",@"text/html",nil];
-//        handle.responseSerializer = [AFHTTPResponseSerializer serializer];
+        handle.responseSerializer = [AFHTTPResponseSerializer serializer];
     });
     
     return handle;
