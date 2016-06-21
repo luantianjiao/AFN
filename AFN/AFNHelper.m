@@ -10,8 +10,8 @@
 #import <Foundation/Foundation.h>
 
 
-//#define BaseUrl @"http://localhost/"
-#define BaseUrl @"http://wan.sogou.com/"
+#define BaseUrl @"http://localhost/"
+//#define BaseUrl @"http://wan.sogou.com/"
 
 @implementation AFNHelper
 

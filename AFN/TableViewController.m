@@ -9,6 +9,7 @@
 #import "TableViewController.h"
 #import "AFNHelper.h"
 #import <MJRefresh.h>
+#import <Foundation/Foundation.h>
 
 @interface TableViewController ()
 
@@ -32,16 +33,30 @@
     //添加一个下拉刷新头部组件
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
 #pragma mark 如果数据是通过网络请求获得，在此处再次获取数据
+        
         //先将之前的数据移除掉
         //        [self.items removeAllObjects];
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            static int j = 6;
-            for (int i = 1; i <= 5; i ++) {
-                NSString *new = [NSString stringWithFormat:@"new 单元格%d",j];
-                j ++;
-                [self.items addObject:new];
-            }
-            //通知主线程更新UI界面
+            //有一个bug，第一次刷新无法获取respDict
+            __block NSDictionary *respDict;
+            NSString *url = @"new.json";
+            [AFNHelper get:url parameter:nil success:^(id responseObject) {
+                 respDict = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                           options:NSJSONReadingAllowFragments
+                                                             error:nil];
+                
+                for (NSString *key in respDict) {
+                    NSString *new = [respDict objectForKey:key];
+                    [self.items addObject:new];
+                }
+
+            } faliure:^(id error) {
+                NSLog(@"%@",error);
+            }];
+            
+//            [self.items addObject:@"test"];
+            
+                        //通知主线程更新UI界面
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.tableView reloadData];
             });
@@ -52,18 +67,7 @@
     
     //添加上拉加载更多
     self.tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(tapFooter)];
-
     
-    
-#pragma mark AFNetworking
-    NSString *url = @"";
-    
-    
-    [AFNHelper get:url parameter:nil success:^(id responseObject) {
-        NSLog(@"%@",responseObject);
-    } faliure:^(id error) {
-        NSLog(@"%@",error);
-    }];
 }
 
 #pragma mark 上拉加载更多方法
